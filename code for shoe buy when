@@ -1,0 +1,68 @@
+<?php
+$shoeState = "wet"; // Variable representing the state of shoes
+
+// Array with options for buying and selling
+$options = [
+    "buy" => "I need to buy new shoes",
+    "sell" => "I need to sell my shoes",
+    "price" => 50 // Example price option
+];
+
+switch ($shoeState) {
+    case "wet":
+        echo "I got my shoes wet";
+        break;
+    case "buy":
+        echo $options['buy'];
+        break;
+    case "return":
+        $customerMessage = "they don't fit well"; // Example customer's message
+        echo "I need to return my shoes because " . $customerMessage;
+        break;
+    case "sell":
+        echo $options['sell'];
+        echo " Price: $" . $options['price']; // Accessing price option
+        break;
+    default:
+        echo "No specific condition matched";
+        break;
+}
+
+// Additional logic based on the days
+$dayOfWeek = "monday"; // Assuming you're checking for a specific day
+
+switch ($dayOfWeek) {
+    case "monday":
+        echo "It's Monday";
+        break;
+    case "thursday":
+        echo "It's Thursday";
+        break;
+    case "friday":
+        echo "It's Friday";
+        break;
+    default:
+        // Handle cases for other days if needed
+        break;
+}
+
+$shoes = 20;
+$day = "friday";
+
+if ($shoes < 18) {
+    echo $day; // Echoes "friday" if shoes are less than 18
+} else {
+    $friday = false;
+    // Additional code for the false condition if needed
+}
+
+$temperature = 25; // Assuming a temperature value for the weather condition
+
+if ($temperature < 20) {
+    echo "It's cold outside.";
+} elseif ($temperature >= 20 && $temperature <= 30) {
+    echo "The weather is pleasant.";
+} else {
+    echo "It's hot outside.";
+}
+?>
